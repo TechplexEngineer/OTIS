@@ -1,0 +1,137 @@
+body {
+    background: #b6b6b6;
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+.box{
+    width: 350px;
+    background: #f0f0f0 url(../img/login_bg.jpg) repeat-x 0 0;
+    border: 1px solid white;
+    margin: 30px auto 0;
+    padding: 15px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+form#frontend
+{
+    width: 320px;
+}
+
+.counter{
+    margin: 15px auto 0;
+}
+h1,h2,h3,h4,h5 {
+    margin-top: 0;
+    font-family: arial black, arial;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    text-shadow: 0 1px 0 white;
+}
+
+
+input[type=text], input[type=password] {
+    display: block;
+    margin: 0 0 1em 0;
+    width: 300px;
+    border: 1px solid #9B9B9B;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+input[type=submit], .button
+{
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    background: #348075;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    font-size: 12px;
+    border: none;
+    margin-right: 1em;
+    padding: 6px;
+
+    text-decoration: none;
+}
+input[type=submit]:hover, .button:hover
+{
+    background: #4D736D;
+    cursor: pointer;
+}
+
+
+
+/* This is for the dropdown menu*/
+select[name=type]{
+    width: 100%;
+    border: 1px solid #9B9B9B;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 0 0 1em 0;
+}
+
+/*input{
+    	width: 100%;
+	border: 1px solid #9B9B9B;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 1em;
+	margin: 0 0 1em 0;
+}*/
+
+/*.default-value
+{
+    width: 305px;
+}*/
+
+
+.verror {
+    color: #393939;
+    font-size: 15px;
+}
+/* Register & help */
+fieldset {
+    display: block;
+    margin-bottom: 1em;
+    border: 1px solid #9B9B9B;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+fieldset.create
+{
+    width: 320px;
+}
+#footbar
+{
+    border: 1px solid white;
+    -moz-border-top-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 10px;
+    padding: 2px 4px 2px 4px;
+    position: fixed;
+    bottom: 0;
+    background: #e3e3e3;
+}
+
+form{
+    margin: 0px;
+}
+
+input.login
+{
+    width: 320px;
+}
+

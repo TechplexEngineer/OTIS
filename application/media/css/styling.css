@@ -1,0 +1,284 @@
+/** BODY ELEMENTS **/
+body {
+    color: #333;
+    background-color: #eee;
+}
+
+/** MAIN CONTAINERS **/
+div#container {
+    margin: 2em auto;
+}
+div#header {
+    color: inherit;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-width: 0 2px 2px 0;
+}
+div#header-in {
+    padding: 20px;
+}
+div#content-wrap {
+    overflow: hidden;
+    padding: 10px 0;
+    /*    margin-bottom: 10px;*/
+}
+div.content {
+    color: inherit;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-width: 0 2px 2px 0;
+}
+div.content-in {
+    padding: 20px;
+}
+div.column {
+    /*    width: 200px;*/
+    color: inherit;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-width: 0 2px 2px 0;
+}
+div.column-in {
+    padding: 20px;
+}
+
+div#footer {
+    color: inherit;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-width: 0 2px 2px 0;
+
+}
+div#footer-in {
+    padding: 20px;
+}
+
+/** SUB CONTAINERS **/
+
+/*th {
+    padding-right: 2.5px;
+    padding-left: 5px;
+    padding-bottom: 2.5px;
+    padding-top: 2.5px;
+    vertical-align: middle;
+    font-style: normal;
+        font-variant: small-caps;
+    background-color: #cccccc;
+    font-size: 12pt;
+}
+td {
+
+    padding-right: 2.5px;
+    padding-left: 2.5px;
+    padding-bottom: 2.5px;
+    padding-top: 2.5px;
+    vertical-align: middle;
+}*/
+
+/** LISTS **/
+ul {
+    margin-left: 10px;
+}
+
+/*The following is used in dashboard.php*/
+div.widget{
+    width: 200px;
+    float: left;
+
+    /*    text-align: center;*/
+    border: 1px solid black;
+    padding: 8px;
+    margin: 8px;
+
+    /*    margin-left:8px;
+        font-weight:400;*/
+    -moz-border-radius:11px;
+    -khtml-border-radius:11px;
+    -webkit-border-radius:11px;
+    border-radius:5px;
+    background:#fff;
+    border:2px solid #e5e5e5;
+    -moz-box-shadow:rgba(200,200,200,1) 0 4px 18px;
+    -webkit-box-shadow:rgba(200,200,200,1) 0 4px 18px;
+    -khtml-box-shadow:rgba(200,200,200,1) 0 4px 18px;
+    box-shadow:rgba(200,200,200,1) 0 4px 18px;
+    /*    padding:16px 16px 40px;*/
+}
+div#disclaimer
+{
+    margin-top: 10px;
+    border: 1px dotted black;
+    font-size:10px;
+    background-color: #D7D7D7;
+}
+div.clear
+{
+    clear: both;
+}
+div#profilestats
+{
+    border:2px solid #FF9999;
+}
+div#cal
+{
+    width: 400px;
+    padding-bottom: 0px;
+    float: left;
+}
+hr#hr1
+{
+    margin-bottom: 5px;
+}
+
+
+div#countdown
+{
+    width: 250px;
+}
+
+
+/*div#mail
+{
+/*visibility: hidden;*
+display: none;
+}
+div#text
+{
+/*visibility: hidden;*
+display: none;
+}*/
+
+
+
+
+/* Sortable tables */
+table.sortable th {
+    /*eee 666*/
+    background-color: #D1D4EC;
+    color: black;
+    font-weight: bold;
+    cursor:pointer;
+    /*cursor: default;*/
+}
+
+.left
+{
+    float: left;
+}
+
+
+/*div#sendButton
+{
+  display: none;
+}*/
+
+b
+{
+    font-weight: bold;
+}
+
+#wp{display: none;}
+#wa{display: none;}
+#wi{display: none;}
+#ic{display: none;}
+#ii{display: none;}
+#ec{display: none;}
+#ei{display: none;}
+
+fieldset{
+    padding: 10px;
+}
+legend
+{
+
+    /*line-height: 1.60em;*/
+    font-weight: bold;
+    font-size: 18pt;
+    padding: 0 5px 0 5px;
+}
+td{
+    vertical-align: top;
+}
+.hide
+{
+    display: none;
+}
+
+input[type=submit]
+{
+    padding: 2px 5px 2px 5px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: bold;
+    font-size: 16pt;
+}
+h1 {  font-size: 3.00em; 	}
+h2 {  font-size: 2.50em; 	}
+h3 {  font-size: 2.00em; 	}
+h4 {  font-size: 1.60em; 	}
+h5 {  font-size: 1.20em; 	}
+h6 {  font-size: 1.00em; 	}
+
+div, li, ui, body
+{
+    font-size: 16px;
+}
+
+
+.full
+{
+    width: 100%;
+}
+.half
+{
+    width: 50%;
+}
+.quarter
+{
+    width: 25%;
+}
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.clear{
+    clear:both;
+}
+
+.button, .button:link, .button:visited, .button:active /* input[type=submit],  */
+{
+    color: white;
+    background: #348075;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    font-size: 12px;
+    border: none;
+    margin-right: 1em;
+    padding: 6px;
+
+    text-decoration: none;
+}
+.button:hover /* input[type=submit]:hover,*/
+{
+	background: #4D736D;
+	cursor: pointer;
+}
+
+table.stats
+{
+    border: 0px;
+}
+
+table.stats td
+{
+    padding: 0 3px 0 3px;
+}

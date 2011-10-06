@@ -1,0 +1,143 @@
+body {
+	background: #b6b6b6;
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+.nice_box
+{
+	width: 350px;
+	background: #f0f0f0 url(../img/login_bg.jpg) repeat-x 0 0;
+	border: 1px solid white;
+	margin: 50px auto 0;
+	padding: .5em 1em 0 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.login_form{
+	margin: 50px auto 0;
+}
+
+.counter{
+	margin: 10px auto 0;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+
+h1,h2,h3,h4,h5 {
+	margin-top: 0;
+	font-family: arial black, arial;
+	text-align: center;
+}
+
+h1, h2, h3 {
+	text-shadow: 0 1px 0 white;
+}
+
+/* The followng property is for input fields
+ */
+input[type=text], input[type=password] {
+	display: block;
+	margin: 0 0 1em 0;
+	width: 100%;
+	border: 1px solid #9B9B9B;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 1em;
+}
+
+select[name=type]{
+	width: 100%;
+	border: 1px solid #9B9B9B;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 1em;
+	margin: 0 0 1em 0;
+}
+
+input[type=submit], form a, .button {
+	border: none;
+	margin-right: 1em;
+	padding: 6px;
+	text-decoration: none;
+	font-size: 12px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background: #348075;
+	color: white;
+
+	-moz-box-shadow: 0 1px 0 white;
+	-webkit-box-shadow: 0 1px 0 white;
+	box-shadow: 0 1px 0 white;
+
+}
+.button
+{
+	margin-bottom: 1em;
+}
+
+input[type=submit]:hover, form a:hover, .button:hover {
+	background: #4D736D;
+/*	background: #287368;*/
+	cursor: pointer;
+}
+
+
+
+
+
+
+/* Validation error messages */
+
+.error {
+	color: #393939;
+	font-size: 15px;
+}
+
+fieldset {
+	width: 300px;
+	margin: auto;
+	margin-bottom: 2em;
+	display: block;
+	border: 1px solid #9B9B9B;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding-top: .5em;
+}
+
+
+/* Not necessary. Just the "tutorial created by" stuff at the bottom */
+
+#footbarg{
+	background: #e3e3e3;
+	border-top: 1px solid white;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: .7em .7em .7em 2em;
+
+	font-size: 10pt;
+	font-family: Gill, Helvetica, sans-serif;
+}
+
+#footbar
+{
+	border: 1px solid white;
+	-moz-border-top-right-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+	font-size: 10px;
+	padding: 2px 4px 2px 4px;
+	position: absolute;
+	bottom: 0;
+	background: #e3e3e3;
+}
+
+

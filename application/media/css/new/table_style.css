@@ -1,0 +1,45 @@
+/* 
+    Document   : table_style
+    Created on : Dec 23, 2010, 10:47:37 PM
+    Author     : Techplex Engineer
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+table.list {
+	border-width: 0px;
+	width: 100%;
+	border-style: hidden;
+	border-color: black;
+	border-collapse: collapse;
+	background-color: white;
+}
+table.list th {
+	border-width: 1px;
+	padding: 5px;
+	border-style: dotted;
+	border-color: gray;
+	font-weight: bold;
+	text-align: center;
+	background-color: #EEE;
+
+/*	border-raduis:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;*/
+}
+table.list td {
+	border-width: 1px;
+	padding: 5px;
+	border-style: dotted;
+	border-color: gray;
+
+/*	border-raduis:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;*/
+}
+

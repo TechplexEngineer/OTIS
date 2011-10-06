@@ -1,0 +1,58 @@
+/* 
+    Document   : ui.style
+    Created on : Dec 10, 2010, 9:27:43 AM
+    Author     : student
+    Description:
+        To style UI_Helper's alerts
+*/
+
+.ui_alert
+{
+	margin: 0px 0px 0px 0px;
+	padding: 10px 0 10px 35px;
+
+	width: 95%;
+	font-weight: bold;
+
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	text-align: left;
+}
+
+/* green */
+.message
+{
+    background: #fff6bf url(/application/media/img/accept.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+
+    color: black;
+
+	border-color: #ffd324;
+}
+
+/* red */
+.error
+{
+	background: #F0CACA url(/application/media/img/exclamation.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+	font-weight: normal;
+
+	border-color: #C90000;
+    border-width: 2px 0 2px 0;
+}
+
+/* orange */
+.notice
+{
+	/*#F8FAFC*/
+	background: #E2EEFB url(/application/media/img/error.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+
+    border-color: #B5D4FE;
+    border-width: 2px 0 2px 0;
+}
+
+/*center
+{
+	text-align: center;
+}*/

@@ -1,0 +1,202 @@
+//$(document).ready(function(){
+//    $('#pass2').keyup(function(){
+//        //get value of other pass field
+//        console.log($('#pass').val());
+//        //compare it to the value of this pass field
+//        //show check or x
+//    });
+//
+//});
+var firstname = "";
+var lastname = "";
+$(document).ready(function(){
+    function makeUsrName()
+    {
+        var username =firstname + "." + lastname;
+        $('#uname').val(username);
+    }
+    $('#fname').keyup(function(){
+        firstname = $('#fname').val();
+        makeUsrName()
+    });
+    $('#lname').keyup(function(){
+        lastname=$('#lname').val();
+        makeUsrName()
+    });
+
+});
+
+/**
+ * Comment
+ */
+function passMatch(form) {
+    //console.log(document.getElementById('pass2'));
+    var pass1 = form.pass.value;
+    var pass2 = form.pass2.value;
+    console.log(pass1 + pass2);
+    if(pass1 == pass2)
+    {
+        //enable submitt button
+        form.Submit.disabled=false;
+    //make green checkmark, and small caption "passwords match"
+    }
+    else
+    {
+        //Disable submitt button,
+        form.Submit.disabled=true;
+    // make red x and caption "passwords don't match"
+    }
+
+}
+
+function makeUname(form)
+{
+    console.log("make uname");
+    //document.getElementById("fname").attr
+    var firstname = form.fname.value;
+    var lastname = form.lname.value;
+    var username =firstname + "." + lastname;
+    form.uname.value=username;
+}
+
+/**
+ * passhelp()
+ */
+function passHelp() {
+    alert("Your username is: Firstname.Lastname" 
+	+ "\n\nYour password is the one you registered with."
+	+ "\n\nIf you can't remember your password send mail to:"
+	+ "\n  Blake (at) Team2648 (dot) com");
+
+}
+
+function ajaxStats(fullname)
+{
+    //console.log("sjaxStats");
+    $.ajax({
+        url: "/application/views/widgets/stats.w.php?name="+fullname,
+        cache: false,
+        success: function(html){
+            //            console.log(html);
+            document.getElementById("stats").innerHTML = html;
+        }
+    });
+// make php file with these as get params, then return its outpt,
+// inner html replace
+
+}
+
+function login()
+{
+    console.log("logintoggle");
+    $.ajax({
+        url: "lib/functions/io.php?name=cblogin&val="+document.controlsForm.loginbox.checked,
+        cache: false,
+        success: function(html){
+            console.log(html);
+        }
+    });
+
+}
+//document.controlsForm.loginbox
+//document.controlsForm.regbox
+function reg()
+{
+    console.log("regtoggle");
+    $.ajax({
+        url: "lib/functions/io.php?name=cbreg&val="+document.controlsForm.regbox.checked,
+        cache: false,
+        success: function(html){
+            console.log(html);
+        }
+    });
+
+}
+
+function showMail()
+{
+    makeVisID("mail");
+    makeNotVisID("text");
+    showSubmit();
+}
+
+function showText()
+{
+    makeVisID("text");
+    makeNotVisID("mail");
+    showSubmit();
+}
+
+function showBoth()
+{
+    makeVisID("text");
+    makeVisID("mail");
+    showSubmit();
+}
+
+function showSubmit()
+{
+    $("#sendButton").css({'display':'inline'});
+}
+
+function makeVisID(divID) {
+    //document.getElementById(divID).style.visibility = "visible";
+    document.getElementById(divID).style.display = "block";
+//document.getElementByClass(divID);
+}
+function makeNotVisID(divID) {
+    //document.getElementById(divID).style.visibility = "hidden";
+    document.getElementById(divID).style.display = "none";
+}
+
+function makeVis(divID) {
+
+    document.getElementByClass(divID).style.display = "block";
+}
+function makeNotVis(divID) {
+
+    document.getElementByClass(divID).style.display = "none";
+}
+
+//** Legacy **\\
+function toggleVisTD(name)
+{
+    //if($(item).style.display == "none")
+        if($('td.'+name).css('display') != "none")
+            $('td.'+name).css('display', 'none');
+        else
+             $('td.'+name).css('display', 'table-cell');
+}
+//** End Legacy **\\
+function toggleVis(name)
+{
+    //if($(item).style.display == "none")
+        if($('.'+name).css('display') != "none")
+            $('.'+name).css('display', 'none');
+        else
+             $('.'+name).css('display', 'table-cell');
+}
+
+function toggleVis2(name, checkbox)
+{
+	(checkbox.checked)
+		//console.log();
+    //if($(item).style.display == "none")
+        if(checkbox.checked)
+           $('.'+name).css('display', 'table-cell');
+        else
+			 $('.'+name).css('display', 'none');
+             
+}
+
+function toggleVisID(name)
+{
+    //if($(item).style.display == "none")
+        if($('#'+name).css('display') != "none")
+            $('#'+name).css('display', 'none');
+        else
+             $('#'+name).css('display', 'table-cell');
+}
+
+
+
