@@ -8,6 +8,7 @@ if ($type != "admin")
 	{
 		echo "<script>";
 		echo "var fullname = \"" . $firstname . " " . $lastname . "\";";
+        // /application/views/widgets/stats.w.php?name="+fullname
 		echo "ajaxStats(fullname);";
 		echo "</script>";
 

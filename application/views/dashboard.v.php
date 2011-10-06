@@ -18,6 +18,8 @@ if($sdata['type']=="teamMember" || $sdata['type']=="admin")
 //	$datas['comService'] = $cit->session->userdata('comService');
 //	$datas['buildHours'] = $cit->session->userdata('buildHours');
 	$sdata['stats'] = null;//$datas;
+
+    //This loads the stats box.
 	$this->load->view('widgets/hours.w.php',$sdata);
 
 	//Calendar Widget

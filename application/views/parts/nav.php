@@ -15,20 +15,20 @@ $sdata = $this->session->all_userdata();
 if (!empty($sdata['username'])) {
     if ($sdata['username'] != "register") {
 	if ($sdata['type'] == "teamMember" || $sdata['type'] == "admin") {
-	    echo "<li> My </li>\n";
+	    echo "<li> My: </li>\n";
 	    echo "<ul>\n";
 	    echo "<li>" . anchor('/', "Dashboard") . "</li>\n";
 	    echo "<li><a href=\"/profile\"> Web Profile</a></li>\n";
 	    echo "<li><a href=\"/account\"> Account</a></li>\n";
 	    echo "<li><a href=\"/econtact\"> Emergency Contact</a></li>\n";
 	    echo "<li>" . anchor('/blog', "Write a Blog entry") . "</li>";
-	    echo "<li>" . anchor('/announce', "Announcments") . "</li>";
+	    //echo "<li>" . anchor('/announce', "Announcments") . "</li>";
 	    //echo "<li>" . anchor('/vocab', "Geek Speek") . "</li>";
-	    echo "<li>" . anchor('/stats', "Your Stats") . "</li>";
+	    //echo "<li>" . anchor('/stats', "Your Stats") . "</li>";
 	    echo "</ul>\n";
 	}
 	if ($sdata['type'] == "student") {
-	    echo "<li> My </li>\n";
+	    echo "<li> My: </li>\n";
 	    echo "<ul>\n";
 	    echo "<li><a href=\"./\"> Dashboard </a></li>\n";
 //            echo "<li><a href=\"?page=manage.profile\"> Profile</a></li>\n";
@@ -54,7 +54,7 @@ if (!empty($sdata['username'])) {
 //include "admin/nav.php";
 
     if ($sdata['type'] == "superuser" || $sdata['type'] == "admin" || $sdata['userid'] == 1) {
-	echo "<li> Management </li>";
+	echo "<li> Management: </li>";
 	echo "<ul>";
 	echo "<li>" . anchor("admin", "Admin Dash") . "</li>";
 	echo "<li>" . anchor("admin/users", "User List") . "</li>";

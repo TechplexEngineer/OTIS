@@ -43,7 +43,8 @@ function getRow($name)
 //Gets the cell specified from sheet num
 function getCell($r, $c, $sheetnum)
 {
-	$ssid = "0AnhvV5acDaAvdGVrdmFpWkpNbnVYdXZUeFRwSHE0SkE";
+	//$ssid = "0AnhvV5acDaAvdGVrdmFpWkpNbnVYdXZUeFRwSHE0SkE";
+    $ssid = "0AtfdiGhuBtR4dENyNVZGV25RbkZoTmlLNXVERFd1LVE";
 	$baseurl = "http://spreadsheets.google.com/feeds/cells/";
 	$spreadsheet = $ssid . "/";
 	$sheetID = $sheetnum . "/";

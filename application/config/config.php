@@ -24,7 +24,7 @@ $config['base_url']	= "http://otis.team2648.com/".$config['base_folder'];
 | variable so that it is blank.
 |
 */
-$config['index_page'] = "index.php";//index.php
+$config['index_page'] = "";//index.php
 
 /*
 |--------------------------------------------------------------------------

@@ -104,6 +104,10 @@ div.widget{
     box-shadow:rgba(200,200,200,1) 0 4px 18px;
     /*    padding:16px 16px 40px;*/
 }
+
+div#stats{
+    width: 280px;
+}
 div#disclaimer
 {
     margin-top: 10px;

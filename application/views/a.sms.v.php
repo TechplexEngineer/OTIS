@@ -67,7 +67,7 @@ $bfig = $this->config->item('bfig');
     <table width="100%">
 	<tr>
 	    <td>To</td>
-	    <td><textarea name="ToText" id="smsto" cols="75" rows="2" onKeyUp="return checkEnable();"></textarea></td>
+	    <td><textarea name="ToText" id="smsto" cols="75" rows="2" onKeyUp="return checkEnable();"> All Team Members, </textarea></td>
 	</tr>
 	<tr>
 	    <td>Subject</td>

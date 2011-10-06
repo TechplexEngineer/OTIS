@@ -11,6 +11,8 @@ if (!empty($_GET['name']))
 		include "../../helpers/gdata_helper.php";
 		// GetCollumn of which C#R1 = users name
 		$row = getRow($_GET['name']);
+
+        
 		//die($row);
 		if ($row == "error")
 		{
@@ -24,25 +26,41 @@ if (!empty($_GET['name']))
 		//die("robert");
 		// then get cell from each of the sheets for that user,
 		// assuming they are in the same column of each sheet
-		$s1 = getcell($row, 2, 1);
-		$s2 = getcell($row, 3, 1);
-		$s3 = getcell($row, 4, 1);
-		$s4 = getcell($row, 5, 1);
+//		$s1 = getcell($row, 2, 1);
+//		$s2 = getcell($row, 3, 1);
+//		$s3 = getcell($row, 4, 1);
+//		$s4 = getcell($row, 5, 1);
+
+        $hours    = getcell($row, 2, 1);
+        $contract = getcell($row, 3, 1);
+
+
 		// Store my loot in the session varibles,
 		// so next time I want this, I don't need to fetch it
-		$_SESSION['fhrs'] = $s1;
-		$_SESSION['fdol'] = $s2;
-		$_SESSION['chrs'] = $s3;
-		$_SESSION['bhrs'] = $s4;
+//		$_SESSION['fhrs'] = $s1;
+//		$_SESSION['fdol'] = $s2;
+//		$_SESSION['chrs'] = $s3;
+//		$_SESSION['bhrs'] = $s4;
 	}
 }
 //print_r($_SESSION);
+
+
+echo '<strong>You have:</strong><br/>';
+echo '<ul style="padding-left: 10px;">';
+
+echo '<li>'. $hours .' of 30 fundraising hours</li>';
+
+
+echo '<li>';
+if($contract == "yes")
+    echo 'Ms Luce has your contract :)';
+else
+    echo 'You still need to turn in your <a target="_blank" href="https://docs.google.com/document/d/12M-9tBwch911HvKEbvU-6W5bBdCsefiyxIFTd5ggnHg/edit?hl=en_US">contract</a>';
+
+echo '</li>';
+
+echo '</ul>';
+
 ?>
-<!-- and finally output the information formated for the widget-->
-<strong>You have:</strong><br/>
-<ul style="padding-left: 10px;">
-    <li>        <strong><?php echo $_SESSION['fhrs']; ?></strong> of 30 fundraising hours<br/></li>
-    <li>fundraised $<strong><?php echo $_SESSION['fdol']; ?></strong> of $300<br/></li>
-    <li>        <strong><?php echo $_SESSION['chrs']; ?></strong> of 5 community service hours<br/></li>
-    <li>        <strong><?php echo $_SESSION['bhrs']; ?></strong> of 40 build hours <br/></li>
-</ul>
+
