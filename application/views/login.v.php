@@ -20,18 +20,15 @@
 
 </div><!-- end login_form-->
 <div class="box counter">
- The robot has shipped, now its: <br>
     <script type="text/javascript">
-	TargetDate = "<?php echo $date?>";//"4/7/2011 3:00 PM UTC -0500";
+	TargetDate = "2/21/2012 12:00 AM UTC -0500";
 	BackColor = "";
 	ForeColor = "black";
 	CountActive = true;
 	CountStepper = -1;
 	LeadingZero = false;
-	FinishMessage = "FInish Message";
-	DisplayFormat = "%%D%% days and %%H%%:%%M%%:%%S%% until ";//+ FinishMessage;
-		
+	FinishMessage = "Build them Robots!";
+	DisplayFormat = "%%D%% days and %%H%%:%%M%%:%%S%% until the end of build!";//+ FinishMessage;
     </script>
     <script  type="text/javascript" src="<?php echo MEDIAPATH; ?>js/countdown.js"></script>
-      the Boston Regional.
 </div><!-- end login_form-->
