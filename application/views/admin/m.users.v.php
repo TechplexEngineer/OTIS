@@ -1,79 +1,48 @@
-<style type="text/css">
-    .id{display: none;}
-    .fl{display: table-cell;}
-    .ln{display: none;}
-    .fn{display: none;}
-    .em{display: none;}
-    .sms{display: none;}
-    .ty{display: none;}
-    .hp{display: none;}
-    .cp{display: none;}
-    /*	.me{display: none;}*/
-    .ad{display: none;}
+<script src="http://otis.team2648.com/application/media/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" language="javascript" src="<?php echo MEDIAPATH; ?>js/datatable/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo MEDIAPATH; ?>css/demo_table.css" />
 
-    .wp{display: table-cell;}
-    .ac{display: table-cell;}
-    .ec{display: table-cell;}
-    .last{display: table-cell;}
-</style>
+<script>
+    var tbl;
+    function fnShowHide( iCol ){
+	/* Get the DataTables object again - this is not a recreation, just a get of the object */
+	var oTable = $('#two').dataTable();
 
-
-<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/sorttable.js"></script>
-<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/zebra.js"></script>
-
-
-<h5>Users List</h5>
-<hr>
-<br/>
-<style type="text/css" >
-    /*	body{
-		margin: 64px;
-		font-family: "lucida grande", verdana, lucida, sans-serif;
-		font-size: 8pt;
-	}*/
-
-    table{
-        border: 1px solid #666;
+	var bVis = oTable.fnSettings().aoColumns[iCol].bVisible;
+	oTable.fnSetColumnVis( iCol, bVis ? false : true );
     }
-    tr td{
-        /*		font-family: "lucida grande", verdana, sans-serif;*/
-        /*		font-size: 8pt;*/
-        padding: 3px 8px;
-        background: #fff;
+    $.fn.dataTableExt.oApi.fnGetColumnIndex = function ( oSettings, sCol )
+    {
+	var cols = oSettings.aoColumns;
+	for ( var x=0, xLen=cols.length ; x<xLen ; x++ )
+	{
+	    if ( cols[x].sTitle.toLowerCase() == sCol.toLowerCase() )
+	    {
+		return x;
+	    };
+	}
+	return -1;
     }
-    thead td{
-        color: #fff;
-        background-color: #C8C028;
-        font-weight: bold;
-        border-bottom: 1px solid #999;
-    }
-    tbody td{
-        border-left: 1px solid #D9D9D9;
-    }
-    tbody tr.even td{
-        background: #eee;
-    }
-    tbody tr.selected td{
-        background: #3d80df;
-        color: #ffffff;
-        /*		font-weight: bold;*/
-        border-left: 1px solid #346DBE;
-        border-bottom: 1px solid #7DAAEA;
-    }
-    tbody tr.ruled td{
-        color: #000;
-        background-color: #C6E3FF;
-        /*		font-weight: bold;*/
-        border-color: #3292FC;
-    }
+    $(document).ready(function() {
+	tbl = $('#two').dataTable({
+	    //"bJQueryUI": true,
+	    "sPaginationType": "full_numbers",
+	    //"bPaginate": false
+	    "iDisplayLength": 15,
+	    "sScrollX": "100",
+	    //"sScrollXInner": "110%",
+	    "bScrollCollapse": true
+	});
 
-    /* Opera fix */
-    head:first-child+body tr.ruled td{
-        background-color: #C6E3FF;
-    }
-
-
-
+	$('#one input').not(':checked').each(function(){
+	    val = tbl.fnGetColumnIndex(this.name);
+	    if(val != -1)
+		tbl.fnSetColumnVis(val, false );
+	    //console.log(this.name, tbl);
+	});
+    } );
+</script>
+<style>
     .tlist
     {
         border-width: 1px;
@@ -90,122 +59,119 @@
         border-style: inset;
         border-color: gray;
         background-color: white;
-
     }
-
-    table.sortable th
-    {
-        padding:5px;
-    }
-
 </style>
+
+<h5>Users List</h5>
+<hr>
+<br/>
+
 What columns do you want to see?
-<table class="tlist omit" id="one">
+<table class="tlist" id="one">
     <tr>
         <td>
-            <input type="checkbox"  onclick="toggleVis2('id', this); "/> ID
+            <input type="checkbox" name="ID" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));"/> ID
             <br>
-            <input type="checkbox"  onclick="toggleVis2('edit', this);" checked="checked"/> Edit
+            <input type="checkbox" name="Edit" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));" checked="checked"/> Edit
             <br>
-            <input type="checkbox"  onclick="toggleVis2('last', this);" checked="checked"/> Last
+            <input type="checkbox" name="Last Login" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));"/> Last
         </td>
         <td>
-            <input type="checkbox"  onclick="toggleVis2('fl', this);" checked="checked"/> First Last
+            <input type="checkbox" name="First Last" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));" checked="checked"/> First Last
             <br>
-            <input type="checkbox"  onclick="toggleVis2('ln', this);"/> Last Name
+            <input type="checkbox" name="Last Name" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));"/> Last Name
             <br>
-            <input type="checkbox"  onclick="toggleVis2('fn', this);"/> First Name
+            <input type="checkbox" name="First Name" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));"/> First Name
         </td>
         <td>
-            <input type="checkbox"  onclick="toggleVis2('em', this);" /> Email
+            <input type="checkbox" name="Email" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));"  checked="checked"/> Email
             <br>
-            <input type="checkbox"  onclick="toggleVis2('sms', this);"/> SMS
+            <input type="checkbox" name="SMS" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));"/> SMS
             <br>
-            <input type="checkbox"  onclick="toggleVis2('ty', this);"/> Type
+            <input type="checkbox" name="Type" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));"  checked="checked"/> Type
         </td>
         <td>
-            <input type="checkbox"  onclick="toggleVis2('hp', this);"/> Home Phone
+            <input type="checkbox" name="Home Phone" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));"/> Home Phone
             <br>
-            <input type="checkbox"  onclick="toggleVis2('cp', this);"/> Cell Phone
+            <input type="checkbox" name="Cell Phone" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));" /> Cell Phone
             <br>
-            <input type="checkbox"  onclick="toggleVis2('ad', this);"/> Address
+            <input type="checkbox" name="Address" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));" /> Address
 
         </td>
         <td>
-            <input type="checkbox"  onclick="toggleVis2('wp', this);" checked="checked"/> Profile
+            <input type="checkbox" name="Profile" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));" /> Profile
             <br>
-            <input type="checkbox"  onclick="toggleVis2('ac', this);" checked="checked"/> Account
+            <input type="checkbox" name="Account" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));" /> Account
             <br>
-            <input type="checkbox"  onclick="toggleVis2('ec', this);" checked="checked"/> Emerg
+            <input type="checkbox" name="EContact" onclick="fnShowHide(tbl.fnGetColumnIndex($(this).attr('name')));" /> EContact
         </td>
     </tr>
 </table>
-<!--<input type="submit" value="re-stripe" onclick="stripe();">-->
-<table width="100%" class="sortable" id="two">
-    <tr>
-        <th class="last">lastLogin</th>
-        <th class="id">ID</th>
-        <th class="edit">Edit</th>
-        <th class="fl">First Last</th>
-        <th class="ln">Last Name</th>
-        <th class="fn">First Name</th>
-        <th class="em">Email </th>
-        <th class="sms">SMS</th>
-        <th class="ty">Type</th>
-        <th class="hp">HomePhone</th>
-        <th class="cp">CellPhone</th>
-        <th class="ad">Address</th>
+<table width="100%" class="display" id="two">
+    <thead>
+	<tr>
+	    <th>Last Login</th>
+	    <th>ID</th>
+	    <th>Edit</th>
+	    <th>First Last</th>
+	    <th>Last Name</th>
+	    <th>First Name</th>
+	    <th>Email </th>
+	    <th>SMS</th>
+	    <th>Type</th>
+	    <th>Home Phone</th>
+	    <th>Cell Phone</th>
+	    <th>Address</th>
+	    <th>Profile</th>
+	    <th>Account</th>
+	    <th>EContact</th>
+	</tr>
+    </thead>
+    <tbody>
+	<?php
+	foreach ($users as $row) {
 
-        <th class="wp">Profile</th>
-        <th class="ac">Account</th>
-        <th class="ec">EContact</th>
-    </tr>
+	    echo "<tr>\n";
+	    echo "<td> " . $row["last_login"] . "</td>\n";
+	    echo "<td> " . $row["id"] . "</td>\n";
+	    echo "<td> " . anchor("admin/user_edit/" . $row["id"], "Edit") . "</td>\n";
+	    echo "<td> " . $row["firstname"] . " " . $row["lastname"] . "</td>\n";
+	    echo "<td> " . $row["lastname"] . "</td>\n";
+	    echo "<td> " . $row["firstname"] . "</td>\n";
+	    echo "<td> " . $row["email"] . "</td>\n";
+	    echo "<td> " . $row["sms"] . "</td>\n";
+	    echo "<td> " . $row["type"] . "</td>\n";
+	    echo "<td> " . $row["homephone"] . "</td>\n";
+	    echo "<td> " . $row["cellphone"] . "</td>\n";
+	    echo "<td> " . $row["mailaddress"] . "</td>\n";
 
-    <?php
-    //foreach ($users as $rowa)
-    //{
-    foreach ($users as $row) {
+	    if ($row["web_state"] == 'incomplete')
+		$row["web_state"] = "<strong>" . $row["web_state"] . "</strong>";
+	    echo "<td> " . $row["web_state"] . "</td>\n";
 
-        echo "<tr>\n";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"last\">" . $row["last_login"] . "</td>\n";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"id\"> " . $row["id"] . "</td>\n";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"edit\">" . anchor("admin/user_edit/" . $row["id"], "Edit") . "</td>\n";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"fl\"> " . $row["firstname"] . " " . $row["lastname"] . "</td>\n";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"ln\"> " . $row["lastname"] . "</td>\n";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"fn\"> " . $row["firstname"] . "</td>\n";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"em\"> " . $row["email"] . "</td>\n";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"sms\">" . $row["sms"] . "</td>\n";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"ty\"> " . $row["type"] . "</td>\n";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"hp\"> " . $row["homephone"] . "</td>\n";
+	    if ($row["account_complete"])
+		$ac = "complete";
+	    else
+		$ac = "<strong>incomplete</strong>";
+	    echo "<td class=\"ac\"> " . $ac . "</td>\n";
 
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"cp\"> " . $row["cellphone"] . "</td>\n";
-//		echo "<td style=\"padding:0 5px 0 5px;\" class=\"me\"> " . $row["medications"] . "</td>\n";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"ad\"> " . $row["mailaddress"] . "</td>\n";
-        if ($row["web_state"] == 'incomplete')
-            $row["web_state"] = "<strong>" . $row["web_state"] . "</strong>";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"wp\"> " . $row["web_state"] . "</td>\n";
+	    if ($row["econtact_complete"] == true)
+		$ec = "complete";
+	    elseif ($row["econtact_complete"] == false)
+		$ec = "<strong>incomplete</strong>";
+	    else
+		$ec = "Error";
 
-        if ($row["account_complete"])
-            $ac = "complete";
-        else
-            $ac= "<strong>incomplete</strong>";
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"ac\"> " . $ac . "</td>\n";
-
-        if ($row["econtact_complete"] == true)
-            $ec = "complete";
-        elseif ($row["econtact_complete"] == false)
-            $ec = "<strong>incomplete</strong>";
-        else
-            $ec="Error";
-
-        echo "<td style=\"padding:0 5px 0 5px;\" class=\"ec\"> " . $ec . "</td>\n";
+	    echo "<td class=\"ec\"> " . $ec . "</td>\n";
 
 
-        echo "</tr>\n";
+	    echo "</tr>\n";
 
-        //print_r($row);
-    } ?>
-
+	    //print_r($row);
+	}
+	?>
+    </tbody>
 </table>
+<div class="clear"></div>
 
 
