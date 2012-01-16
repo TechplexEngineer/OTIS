@@ -1,11 +1,11 @@
 <h5> Submit a weblog(blog) entry</h5>
 <hr><br>
-<script type="text/javascript" src="/application/media/js/jscripts/tiny_mce/jquery.tinymce.js"></script>
+<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/jscripts/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript">
     $().ready(function() {
         $('textarea.tinymce').tinymce({
             // Location of TinyMCE script
-            script_url : '/application/media/js/jscripts/tiny_mce/tiny_mce.js',
+            script_url : '<?php echo MEDIAPATH; ?>js/jscripts/tiny_mce/tiny_mce.js',
 
             // General options
             theme : "advanced",
@@ -22,7 +22,7 @@
             theme_advanced_resizing : true,
 
             // Example content CSS (should be your site CSS)
-			content_css : "http://team2648.com/sites/team2648.com/themes/zen_midnight/zen_midnight.css"
+			//content_css : "http://team2648.com/sites/team2648.com/themes/zen_midnight/zen_midnight.css"
         });
     });
 

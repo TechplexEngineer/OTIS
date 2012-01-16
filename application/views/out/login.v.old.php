@@ -1,7 +1,7 @@
 <?php $bfig = $this->config->item('bfig'); ?>
 <html>
 	<head><title><?php echo $bfig['title']; ?></title>
-		<link rel="stylesheet" href="/application/media/css/styling.css"type="text/css" media="screen">
+		<link rel="stylesheet" href="<?php echo MEDIAPATH; ?>css/styling.css"type="text/css" media="screen">
 		
 	</head>
 	<body>

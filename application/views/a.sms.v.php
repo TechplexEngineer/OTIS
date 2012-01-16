@@ -1,19 +1,19 @@
-<script src="/application/media/js/jquery-1.4.2.min.js" type="text/javascript"></script>
-<script src="/application/media/js/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
-<script src="/application/media/js/jquery.autofocus-min.js" type="text/javascript"></script>
+<script src="<?php echo MEDIAPATH; ?>js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="<?php echo MEDIAPATH; ?>js/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
+<script src="<?php echo MEDIAPATH; ?>js/jquery.autofocus-min.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="/application/media/css/jq/jquery.ui.all.css">
-<script type="text/javascript" src="/application/media/js/jquery-1.4.2.js"></script>
-<script type="text/javascript" src="/application/media/js/ui/jquery.ui.core.js"></script>
-<script type="text/javascript" src="/application/media/js/ui/jquery.ui.widget.js"></script>
-<script type="text/javascript" src="/application/media/js/ui/jquery.ui.position.js"></script>
-<script type="text/javascript" src="/application/media/js/ui/jquery.ui.autocomplete.js"></script>
+<link rel="stylesheet" href="<?php echo MEDIAPATH; ?>css/jq/jquery.ui.all.css">
+<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/ui/jquery.ui.core.js"></script>
+<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/ui/jquery.ui.position.js"></script>
+<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/ui/jquery.ui.autocomplete.js"></script>
 <?php
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-echo "<script type=\"text/javascript\" src=\"/application/media/js/counter/counter.js\"></script>";
+echo "<script type=\"text/javascript\" src=\"".MEDIAPATH."js/counter/counter.js\"></script>";
 echo form_open('/admin/sms_send');
 $bfig = $this->config->item('bfig');
 ?>

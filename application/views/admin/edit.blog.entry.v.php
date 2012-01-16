@@ -1,8 +1,8 @@
 <h5> Edit Blog Entry</h5>
 <hr><br>
-<!--<script type="text/javascript" src="/application/media/js/jscripts/tiny_mce/jquery.tinymce.js"></script>-->
+<!--<script type="text/javascript" src="js/jscripts/tiny_mce/jquery.tinymce.js"></script>-->
 
-<script type="text/javascript" src="/application/media/js/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/tiny_mce/tiny_mce.js"></script>
 
 <!--<script type="text/javascript">
 

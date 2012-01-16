@@ -11,9 +11,10 @@
 |	http://example.com/
 |
 */
-$config['base_folder'] = '';
-$config['base_url']	= "http://otis.team2648.com/".$config['base_folder'];
-
+$config['base_folder'] = 'OTIS/';
+$config['base_url']	= "http://localhost/".$config['base_folder'];
+define('MEDIAPATH', $config['base_url'].APPPATH . 'media/');
+define('APPURL', $config['base_url'].APPPATH);
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -24,7 +25,7 @@ $config['base_url']	= "http://otis.team2648.com/".$config['base_folder'];
 | variable so that it is blank.
 |
 */
-$config['index_page'] = "";//index.php
+$config['index_page'] = "index.php";//index.php
 
 /*
 |--------------------------------------------------------------------------

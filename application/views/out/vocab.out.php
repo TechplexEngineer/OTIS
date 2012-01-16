@@ -9,7 +9,7 @@
     }
 
 </style>
-<script src="http://team2648.com/ois/application/media/js/jquery.js" type="text/javascript"></script>
+<script src="<?php echo MEDIAPATH; ?>js/jquery.js" type="text/javascript"></script>
 <script type="text/javascript" >
     function highlight(tag){
 	

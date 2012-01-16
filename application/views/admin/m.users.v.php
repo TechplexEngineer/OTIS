@@ -18,8 +18,8 @@
 </style>
 
 
-<script type="text/javascript" src="/application/media/js/sorttable.js"></script>
-<script type="text/javascript" src="/application/media/js/zebra.js"></script>
+<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/sorttable.js"></script>
+<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/zebra.js"></script>
 
 
 <h5>Users List</h5>

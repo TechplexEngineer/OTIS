@@ -1,6 +1,6 @@
 <?php
 //$this->load->helper('html');
-echo link_tag('application/media/css/new/table_style.css');
+echo link_tag(MEDIAPATH.'css/new/table_style.css');
 ?>
 <h5> Listing of Groups </h5>
 <hr>

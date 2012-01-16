@@ -18,9 +18,9 @@ if (!empty($sdata['username'])) {
 	    echo "<li> My: </li>\n";
 	    echo "<ul>\n";
 	    echo "<li>" . anchor('/', "Dashboard") . "</li>\n";
-	    echo "<li><a href=\"/profile\"> Web Profile</a></li>\n";
-	    echo "<li><a href=\"/account\"> Account</a></li>\n";
-	    echo "<li><a href=\"/econtact\"> Emergency Contact</a></li>\n";
+            echo "<li>" . anchor('/profile', "Web Profile") . "</li>\n";
+            echo "<li>" . anchor('/account', "Account") . "</li>\n";
+            echo "<li>" . anchor('/econtact', "Emergency Contact") . "</li>\n";
 	    echo "<li>" . anchor('/blog', "Write a Blog entry") . "</li>";
 	    //echo "<li>" . anchor('/announce', "Announcments") . "</li>";
 	    //echo "<li>" . anchor('/vocab', "Geek Speek") . "</li>";
@@ -30,7 +30,7 @@ if (!empty($sdata['username'])) {
 	if ($sdata['type'] == "student") {
 	    echo "<li> My: </li>\n";
 	    echo "<ul>\n";
-	    echo "<li><a href=\"./\"> Dashboard </a></li>\n";
+	    echo "<li>" . anchor('/', "Dashboard") . "</li>\n";
 //            echo "<li><a href=\"?page=manage.profile\"> Profile</a></li>\n";
 //            echo "<li><a href=\"?page=manage.info\"> Information</a></li>\n";
 //            echo "<li><a href=\"?page=manage.econtact\"> Emergency Contact</a></li>\n";
@@ -40,12 +40,12 @@ if (!empty($sdata['username'])) {
 	if ($sdata['type'] == "mentor") {
 	    echo "<li> My </li>\n";
 	    echo "<ul>\n";
-	    echo "<li><a href=\"./\"> Dashboard </a></li>\n";
+	    echo "<li>" . anchor('/', "Dashboard") . "</li>\n";
 	    echo "</ul>\n";
 
 	    echo "<li> View </li>\n";
 	    echo "<ul>\n";
-	    echo "<li><a href=\"/einfo\"> EContact Info </a></li>\n";
+            echo "<li>" . anchor('/einfo', "Emergency Info") . "</li>\n";
 	    echo "</ul>\n";
 	}
     }
@@ -74,9 +74,9 @@ if (!empty($sdata['username'])) {
 //echo "<li><a href=\"?page=bugs.php&referrer=" . $sdata['REQUEST_URI'] . "\"> Report a Bug </a></li>\n";
 
     if ($sdata['username'] != "register")
-	echo "<li><a href=\"/auth/logout\"> Logout </a></li>\n";
+        echo "<li>" . anchor('/auth/logout', "Logout") . "</li>\n";
     else
-	echo "<li><a href=\"/auth/logout\"> Exit </a></li>\n";
+        echo "<li>" . anchor('/auth/logout', "Exit") . "</li>\n";
 
 
 

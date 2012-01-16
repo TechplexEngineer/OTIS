@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head><title><?php echo $title; ?></title>
 
-	<link href="<?php echo base_url() . 'application/media/'; ?>css/new/style.css" rel="stylesheet" type="text/css" media="all" />
-	<link rel='stylesheet' href='/application/media/css/ui.style.css' type='text/css' media='screen'/>
+	<link href="<?php echo MEDIAPATH; ?>css/new/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel='stylesheet' href='<?php echo MEDIAPATH; ?>css/ui.style.css' type='text/css' media='screen'/>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<script type="text/javascript" src="/application/media/js/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo MEDIAPATH; ?>js/jquery.js"></script>
 	<script type="text/javascript" >
 	    $(document).ready(function() {
 		$('.default-value').each(function() {

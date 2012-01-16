@@ -70,11 +70,11 @@ function passHelp() {
 
 }
 
-function ajaxStats(fullname)
+function ajaxStats(fullname, mp)
 {
     //console.log("sjaxStats");
     $.ajax({
-        url: "/application/views/widgets/stats.w.php?name="+fullname,
+        url: mp+"/views/widgets/stats.w.php?name="+fullname,
         cache: false,
         success: function(html){
             //            console.log(html);

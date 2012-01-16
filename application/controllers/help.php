@@ -44,7 +44,7 @@ class help extends Controller
 
 		if (mysql_num_rows($qry) > 0)
 		{
-			echo "<LINK REL=StyleSheet HREF=\"/application/media/css/table.css\" TYPE=\"text/css\" MEDIA=screen>";
+			echo "<LINK REL=StyleSheet HREF=\"".MEDIAPATH."css/table.css\" TYPE=\"text/css\" MEDIA=screen>";
 			echo "<table class='sample'>";
 			echo "<tr>";
 			echo "<th> Full Name </th>";

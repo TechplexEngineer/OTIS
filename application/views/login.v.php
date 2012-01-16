@@ -32,6 +32,6 @@
 	DisplayFormat = "%%D%% days and %%H%%:%%M%%:%%S%% until ";//+ FinishMessage;
 		
     </script>
-    <script  type="text/javascript" src="/application/media/js/countdown.js"></script>
+    <script  type="text/javascript" src="<?php echo MEDIAPATH; ?>js/countdown.js"></script>
       the Boston Regional.
 </div><!-- end login_form-->

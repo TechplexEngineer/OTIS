@@ -3,7 +3,7 @@
 
 $bfig = $this->config->item('bfig');
 ?>
-<div class="right"><?php echo img('application/media/img/logo-mini120.png'); ?></div>
+<div class="right"><?php echo img(MEDIAPATH.'img/logo-mini120.png'); ?></div>
 
 <div>
 <h2> <?php echo $bfig['sysname']; ?> </h2>

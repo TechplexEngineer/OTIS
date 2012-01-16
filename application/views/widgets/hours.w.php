@@ -9,11 +9,11 @@ if ($type != "admin")
 		echo "<script>";
 		echo "var fullname = \"" . $firstname . " " . $lastname . "\";";
         // /application/views/widgets/stats.w.php?name="+fullname
-		echo "ajaxStats(fullname);";
+		echo "ajaxStats(fullname, \"".APPURL."\");";
 		echo "</script>";
 
 		echo "Loading Stats...";
-		echo "<img alt=\"Loading Stats\"  src=\"application/media/img/ajax-loader.gif\"/>";
+		echo "<img alt=\"Loading Stats\"  src=\"".MEDIAPATH."img/ajax-loader.gif\"/>";
 	} else
 	{
 		include "dashboard.stats.php";

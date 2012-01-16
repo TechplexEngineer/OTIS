@@ -9,14 +9,14 @@
         <script type="text/javascript"></script>
 
         <!-- Stylesheets -->
-        <link href="<?php echo base_url() . 'application/media/'; ?>css/reset.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="<?php echo base_url() . 'application/media/'; ?>css/default.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="<?php echo base_url() . 'application/media/'; ?>css/styling.css" rel="stylesheet" type="text/css" media="screen" />
-	<link rel='stylesheet' href='/application/media/css/ui.style.css' type='text/css' media='screen'/>
+        <link href="<?php echo MEDIAPATH; ?>css/reset.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="<?php echo MEDIAPATH; ?>css/default.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="<?php echo MEDIAPATH; ?>css/styling.css" rel="stylesheet" type="text/css" media="screen" />
+	<link rel='stylesheet' href='<?php echo MEDIAPATH; ?>css/ui.style.css' type='text/css' media='screen'/>
         <!--Validation-->
 
-        <script src="<?php echo base_url() . 'application/media/'; ?>js/jquery.js" type="text/javascript"></script>
-        <script src="<?php echo base_url() . 'application/media/'; ?>js/common.js" type="text/javascript"></script>
+        <script src="<?php echo MEDIAPATH; ?>js/jquery.js" type="text/javascript"></script>
+        <script src="<?php echo MEDIAPATH; ?>js/common.js" type="text/javascript"></script>
 
 
         <!-- Meta Information -->
